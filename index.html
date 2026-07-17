@@ -3,17 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web App</title>
+    <title>2-Look PLL Trainer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <h1>🚀 Task & Habit Tracker</h1>
-        <div class="input-section">
-            <input type="text" id="task-input" placeholder="What's your next goal?">
-            <button id="add-btn">Add Task</button>
+        <h1>🎓 2-Look PLL Trainer</h1>
+        
+        <!-- Flashcard Trainer Section -->
+        <div class="trainer-section">
+            <h2>Algorithm Trainer</h2>
+            <div class="card" id="flashcard">
+                <p id="card-case">Click "Next Case" to Start</p>
+                <p id="card-alg" class="hidden">---</p>
+            </div>
+            <div class="button-group">
+                <button id="reveal-btn">Show Alg</button>
+                <button id="next-btn">Next Case</button>
+            </div>
         </div>
-        <ul id="task-list"></ul>
+
+        <hr>
+
+        <!-- Cheat Sheet Reference Section -->
+        <div class="reference-section">
+            <h2>Quick Reference</h2>
+            
+            <h3>Step 1: Corner Permutation</h3>
+            <ul class="alg-list">
+                <li><strong>Headlines (T-Perm):</strong> <span class="alg">R U R' U' R' F R2 U' R' U' R U R' F'</span></li>
+                <li><strong>No Headlines (Y-Perm):</strong> <span class="alg">F R U' R' U' R U R' F' R U R' U' R' F R F'</span></li>
+            </ul>
+
+            <h3>Step 2: Edge Permutation</h3>
+            <ul class="alg-list">
+                <li><strong>Ua-Perm (Clockwise):</strong> <span class="alg">R U' R U R U R U' R' U' R2</span></li>
+                <li><strong>Ub-Perm (Counter):</strong> <span class="alg">R2 U R U R' U' R' U' R' U R'</span></li>
+                <li><strong>H-Perm (Cross Swap):</strong> <span class="alg">M2 U M2 U2 M2 U M2</span></li>
+                <li><strong>Z-Perm (Adjacent Swap):</strong> <span class="alg">M2 U M2 U M' U2 M2 U2 M'</span></li>
+            </ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
